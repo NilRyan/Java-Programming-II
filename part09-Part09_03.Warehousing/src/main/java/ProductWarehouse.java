@@ -20,4 +20,13 @@ public class ProductWarehouse extends Warehouse {
         return productName;
     }
     
+    public void setName(String productName) {
+        this.productName = productName;
+    }
+    
+    @Override
+    public String toString() {
+        return productName + ": " + super.toString();
+    }
+    
 }

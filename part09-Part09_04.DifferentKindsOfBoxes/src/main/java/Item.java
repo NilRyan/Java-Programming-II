@@ -20,5 +20,29 @@ public class Item {
     public int getWeight() {
         return weight;
     }
+    
+    @Override
+    public boolean equals(Object comparedObject) {
+        if (this == comparedObject) {
+            return true;
+        }
+        
+        if (!(comparedObject instanceof Item)) {
+            return false;
+        }
+        
+        Item comparedItem = (Item) comparedObject;
+        
+        if (this.name.equals(comparedItem.name)) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
+    }
 
 }
